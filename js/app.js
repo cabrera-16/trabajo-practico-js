@@ -1,5 +1,5 @@
 const hola=()=>{
-    return console.info();
+    return alert("git commit ");
     
 }
-hola("segundo commit");
+hola();
