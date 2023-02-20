@@ -1,5 +1,5 @@
 const hola=()=>{
-    return alert("git commit ");
+    return alert("klk aprendiendo git");
     
 }
 hola();
