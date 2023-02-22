@@ -19,7 +19,11 @@ pareIpares(195);/*
 
 /*14) Programa una función para convertir grados Celsius a Fahrenheit y viceversa, pe. miFuncion(0,"C") devolverá 32°F.*/
 
+<<<<<<< HEAD
 /*const  convertirCf=(grado=undefined,unidad=undefined)=>{
+=======
+const  convertirCf=(grado=undefined,unidad=undefined)=>{
+>>>>>>> b71fd5ddd96bc5208c07a4b81d36ced06a47f13c
     if (grado === undefined)return console.warn("no ingresaste un grado convertir");
     if(typeof grado !=="number")return console.error(`el valor "${grado}" no es un numero`);
     if(unidad === undefined)return console.warn("no ingresate ningun grado convertir");
@@ -39,6 +43,7 @@ pareIpares(195);/*
 //convertirCf(2,"hola");
 //convertirCf(2,"1");
 //convertirCf(50,"C")
+<<<<<<< HEAD
 convertirCf(0,"C");*/
 
 /*15) Programa una función para convertir números de base binaria a decimal y viceversa, pe. miFuncion(100,2) devolverá 4 base 10.*/
@@ -105,3 +110,6 @@ devuelveMontoFinal(1000,"2");
 
 
 /*17) Programa una función que dada una fecha válida determine cuantos años han pasado hasta el día de hoy, pe. miFuncion(new Date(1984,4,23)) devolverá 35 años (en 2020).*/
+=======
+convertirCf(0,"C");
+>>>>>>> b71fd5ddd96bc5208c07a4b81d36ced06a47f13c
