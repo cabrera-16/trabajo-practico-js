@@ -19,11 +19,8 @@ pareIpares(195);/*
 
 /*14) Programa una función para convertir grados Celsius a Fahrenheit y viceversa, pe. miFuncion(0,"C") devolverá 32°F.*/
 
-<<<<<<< HEAD
 /*const  convertirCf=(grado=undefined,unidad=undefined)=>{
-=======
-const  convertirCf=(grado=undefined,unidad=undefined)=>{
->>>>>>> b71fd5ddd96bc5208c07a4b81d36ced06a47f13c
+
     if (grado === undefined)return console.warn("no ingresaste un grado convertir");
     if(typeof grado !=="number")return console.error(`el valor "${grado}" no es un numero`);
     if(unidad === undefined)return console.warn("no ingresate ningun grado convertir");
@@ -37,13 +34,12 @@ const  convertirCf=(grado=undefined,unidad=undefined)=>{
     }
 }
 
-//convertirCf();
-//convertirCf("12");
-//convertirCf(2,true);
-//convertirCf(2,"hola");
-//convertirCf(2,"1");
-//convertirCf(50,"C")
-<<<<<<< HEAD
+convertirCf();
+convertirCf("12");
+convertirCf(2,true);
+convertirCf(2,"hola");
+convertirCf(2,"1");
+convertirCf(50,"C");
 convertirCf(0,"C");*/
 
 /*15) Programa una función para convertir números de base binaria a decimal y viceversa, pe. miFuncion(100,2) devolverá 4 base 10.*/
@@ -71,16 +67,9 @@ convetirDebinarioAdecimal(100,"2");
 convetirDebinarioAdecimal(100,2);
 convetirDebinarioAdecimal(10011100,2);*/
 
-
-
-
-
-
-
-
 /*16) Programa una función que devuelva el monto final después de aplicar un descuento a una cantidad dada, pe. miFuncion(1000, 20) devolverá 800.*/
 
-const devuelveMontoFinal=(monto=undefined,descuento=0)=>{
+/*const devuelveMontoFinal=(monto=undefined,descuento=0)=>{
     if(monto===undefined)return console.warn("no ingresate un monto");
 
     if(typeof monto!=="number")return console.error(`el valor ${monto} no es un numero`);
@@ -97,19 +86,24 @@ const devuelveMontoFinal=(monto=undefined,descuento=0)=>{
 
 }
 
-//devuelveMontoFinal();
-//devuelveMontoFinal("2");
-//devuelveMontoFinal(0);
-//devuelveMontoFinal(-5);
-//devuelveMontoFinal(100,"2");
-devuelveMontoFinal(1000,"2");
-
-
-
-
+devuelveMontoFinal();
+devuelveMontoFinal("2");
+devuelveMontoFinal(0);
+devuelveMontoFinal(-5);
+devuelveMontoFinal(100,"2");
+devuelveMontoFinal(1000,"2");*/
 
 
 /*17) Programa una función que dada una fecha válida determine cuantos años han pasado hasta el día de hoy, pe. miFuncion(new Date(1984,4,23)) devolverá 35 años (en 2020).*/
-=======
-convertirCf(0,"C");
->>>>>>> b71fd5ddd96bc5208c07a4b81d36ced06a47f13c
+
+const fechaValida=(fecha=undefined)=>{
+  // valdidacion de datos
+  if (fecha === undefined)return console.info("no ingresaste la fecha");
+  if (!(fecha instanceof Date)) return console.error("el valor que ingresaste no es una fecha valida");
+  //logica
+  let hoyMenoFecha = new Date().getTime - fecha.getTime();
+  let anios =1000*60*60*24*365;
+  let aniosHumano = Math.floor(hoyMenoFecha/anios)
+
+}
+fechaValida(new Date(1984,4,5));
