@@ -101,9 +101,27 @@ const fechaValida=(fecha=undefined)=>{
   if (fecha === undefined)return console.info("no ingresaste la fecha");
   if (!(fecha instanceof Date)) return console.error("el valor que ingresaste no es una fecha valida");
   //logica
-  let hoyMenoFecha = new Date().getTime - fecha.getTime();
+  let hoyMenoFecha = new Date().getTime() - fecha.getTime();
   let anios =1000*60*60*24*365;
-  let aniosHumano = Math.floor(hoyMenoFecha/anios)
+  let aniosHumano = Math.floor(hoyMenoFecha / anios);
+  //validadciones 
 
+  return (Math.sign(aniosHumano)===-1)
+  ?console.info(`falta ${Math.abs(aniosHumano)} años para la fecha ${fecha.getFullYear()} `)
+  :(Math.sign(aniosHumano)=== 1)
+  ?console.info(`han pasado ${aniosHumano} años, desde ${fecha.getFullYear()}`)
+  :console.info(`estamos año actual ${fecha.getFullYear()}`)
+
+ 
 }
-fechaValida(new Date(1984,4,5));
+fechaValida();
+fechaValida({});
+fechaValida(false);
+fechaValida(new Date());
+fechaValida(new Date(1991,5,16));
+fechaValida(new Date(1992,9,20));
+fechaValida(new Date(2085,2,5))
+
+
+
+
