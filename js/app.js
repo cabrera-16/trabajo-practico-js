@@ -96,7 +96,7 @@ devuelveMontoFinal(1000,"2");*/
 
 /*17) Programa una función que dada una fecha válida determine cuantos años han pasado hasta el día de hoy, pe. miFuncion(new Date(1984,4,23)) devolverá 35 años (en 2020).*/
 
-const fechaValida=(fecha=undefined)=>{
+/*const fechaValida=(fecha=undefined)=>{
   // valdidacion de datos
   if (fecha === undefined)return console.info("no ingresaste la fecha");
   if (!(fecha instanceof Date)) return console.error("el valor que ingresaste no es una fecha valida");
@@ -120,8 +120,64 @@ fechaValida(false);
 fechaValida(new Date());
 fechaValida(new Date(1991,5,16));
 fechaValida(new Date(1992,9,20));
-fechaValida(new Date(2085,2,5))
+fechaValida(new Date(2085,2,5))*/
+
+/*18) Programa una función que dada una cadena de texto cuente el número de vocales y consonantes, pe. miFuncion("Hola Mundo") devuelva Vocales: 4, Consonantes: 5.*/
+ /*
+const textoCosonante=(texto="")=>{
+  if(!texto)return console.info("no ingresaste las  texto");
+  if (typeof texto !=="string")return console.error(`no ingresate"${texto}" no un un cadena de testo"`);
+  
+  vocales =0;
+  consonante =0;
+  texto= texto.toLocaleLowerCase();
+  for( let letra of texto ){
+    if (/[aeiouáéíóú]/.test(letra))vocales++;
+  
+    if(/[bcdlfghjkmnñpqrstvwyz]/.test(letra))consonante++;
+  }  
 
 
+return console.info({
+  texto,
+  vocales,
+  consonante
+})
 
+}
+textoCosonante();
+textoCosonante(3);
+textoCosonante("hola mundo");
+textoCosonante("HOLA MUNDO")*/
+
+
+/*19) Programa una función que valide que un texto sea un nombre válido, pe. miFuncion("Jonathan MirCha") devolverá verdadero.*/
+ /* const validarTexto=(nombre="")=>{
+    if(!nombre)return console.warn("ingrese el nombre");
+    if (typeof nombre!=="string")return console.error(`no ingresate"${nombre}" no es una cadena de texto`);
+      let RegExp= /^[a-za-zñÑáéíóúū\s]+$/g.test(nombre);
+     
+      return(RegExp)
+      ?console.info(`"${nombre}" es valido`)
+      :console.info(`"${nombre}" No es un nombre valido`)
+
+  }
+  validarTexto();
+  validarTexto(2);
+  validarTexto("jose cabrera.+6985")*/
+/*20) Programa una función que valide que un texto sea un email válido, pe. miFuncion("jonmircha@gmail.com") devolverá verdadero.*/
+  const validarEmail=(email="")=>{
+      if(!email)return console.warn("ingrese el correo");
+      if (typeof email!=="string")return console.error(`no ingresate"${email}" no es una cadena de texto`);
+        let RegExp=  /[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})/i.test(email);
+     
+      return(RegExp)
+      ?console.info(`"${email}" email es valido`)
+      :console.info(`"${email}" email No es  valido`)
+
+  }
+  validarEmail();
+  validarEmail(2);
+  validarEmail("josemiguelcabrera@gmail.com");
+  validarEmail("johanmiihi1@.com")
 
