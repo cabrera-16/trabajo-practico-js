@@ -123,6 +123,7 @@ fechaValida(new Date(1992,9,20));
 fechaValida(new Date(2085,2,5))*/
 
 /*18) Programa una función que dada una cadena de texto cuente el número de vocales y consonantes, pe. miFuncion("Hola Mundo") devuelva Vocales: 4, Consonantes: 5.*/
+
  /*
 const textoCosonante=(texto="")=>{
   if(!texto)return console.info("no ingresaste las  texto");
@@ -187,15 +188,16 @@ textoCosonante("HOLA MUNDO")*/
 
 
   /*21) Programa una función que dado un array numérico devuelve otro array con los números elevados al cuadrado, pe. mi_funcion([1, 4, 5]) devolverá [1, 16, 25].*/
-   const devuleAr =(arr=undefined)=>{
+
+   /*const devuleAr =(arr=undefined)=>{
     if(arr===undefined)console.warn("no ingresate un arreglo de numero ");
 
     if( !(arr instanceof Array)) return console.error("el valor que ingresaste no es un areglo");
 
-    if(arr.lenght===0)return console.error("el areglo esta vacio");
+    if(arr.length===0)return console.error("el areglo esta vacio");
 
     for(let num of arr){
-      if(typeof arr!=="number")return console.warn(`el "${num}" ingresado no es un numero`);
+      if(typeof num!=="number")return console.warn(`el "${num}" ingresado no es un numero`);
 
     }
     const newArr = arr.map(el=>el*el);
@@ -203,7 +205,67 @@ textoCosonante("HOLA MUNDO")*/
    }
    devuleAr();
    devuleAr();
-   devuleAr([1,4,8])
+   devuleAr([1,4,8])*/
 
   /*22) Programa una función que dado un array devuelva el número mas alto y el más bajo de dicho array, pe. miFuncion([1, 4, 5, 99, -60]) devolverá [99, -60].*/
+   /*const arrayMinMax=(arr=undefined)=>{
+      if (arr=== undefined)return console.warn("no ingresaste un arreglo de un numero");
+
+      if (!(arr instanceof Array)) return console.error("el valor que ingresaste no es un arreglo");
+
+      if(arr.length === 0)return console.warn("el arreglo esta vacio");
+
+      for( num of arr){
+        if (typeof num!=="number")return console.error(`el valor "${num}" ingresado, No es un numero`);
+      }
+      return console.info(`Arreglo original:${arr}\n valor mayor:${Math.max(...arr)},\nvalor minimo:${Math.min(...arr)}?`);
+   }
+   arrayMinMax();
+   arrayMinMax({});
+   arrayMinMax([]);
+   arrayMinMax([1,2,true]);
+   arrayMinMax([1,4,5,99,-60]);*/
+
  /* 23) Programa una función que dado un array de números devuelva un objeto con 2 arreglos en el primero almacena los números pares y en el segundo los impares, pe. miFuncion([1,2,3,4,5,6,7,8,9,0]) devolverá {pares: [2,4,6,8,0], impares: [1,3,5,7,9]}.*/
+    /*const arrayObejto=(arr= undefined)=>{
+       if (arr=== undefined)return console.warn("no ingresaste un arreglo de un numero");
+
+      if (!(arr instanceof Array)) return console.error("el valor que ingresaste no es un arreglo");
+
+      if(arr.length === 0)return console.warn("el arreglo esta vacio");
+
+      for( num of arr){
+        if (typeof num!=="number")return console.error(`el valor "${num}" ingresado, No es un numero`);
+      }
+      
+       return console.info({
+        pares:arr.filter(num=> num%2===0),
+        impares:arr.filter(num=> num%2===1)
+       })
+    }
+
+    arrayObejto([1,2,3,4,5,6,7,8,9,0]);*/
+
+/*24) Programa una función que dado un arreglo de números devuelva un objeto con dos arreglos, el primero tendrá los numeros ordenados en forma ascendente y el segundo de forma descendiente, pe. miFuncion([7, 5,7,8,6]) devolverá { asc: [5,6,7,7,8], desc: [8,7,7,6,5] }.*/
+ const acederDesender=(arr= undefined)=>{
+   if (arr=== undefined)return console.warn("no ingresaste un arreglo de un numero");
+
+      if (!(arr instanceof Array)) return console.error("el valor que ingresaste no es un arreglo");
+
+      if(arr.length === 0)return console.warn("el arreglo esta vacio");
+
+      for( num of arr){
+        if (typeof num!=="number")return console.error(`el valor "${num}" ingresado, No es un numero`);
+      }
+
+      return console.info({
+        Acedente:arr.sort()
+      
+      })
+
+
+
+ }
+ acederDesender([2,12,4])
+/*25) Programa una función que dado un arreglo de elementos, elimine los duplicados, pe. miFuncion(["x", 10, "x", 2, "10", 10, true, true]) devolverá ["x", 10, 2, "10", true].
+/*26) Programa una función que dado un arreglo de números obtenga el promedio, pe. promedio([9,8,7,6,5,4,3,2,1,0]) devolverá 4.5.*/
