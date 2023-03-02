@@ -166,18 +166,44 @@ textoCosonante("HOLA MUNDO")*/
   validarTexto(2);
   validarTexto("jose cabrera.+6985")*/
 /*20) Programa una función que valide que un texto sea un email válido, pe. miFuncion("jonmircha@gmail.com") devolverá verdadero.*/
-  const validarEmail=(email="")=>{
+
+ /* const validarEmail=(email="")=>{
       if(!email)return console.warn("ingrese el correo");
       if (typeof email!=="string")return console.error(`no ingresate"${email}" no es una cadena de texto`);
+
         let RegExp=  /[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})/i.test(email);
      
       return(RegExp)
       ?console.info(`"${email}" email es valido`)
       :console.info(`"${email}" email No es  valido`)
 
+  
+
   }
   validarEmail();
   validarEmail(2);
   validarEmail("josemiguelcabrera@gmail.com");
-  validarEmail("johanmiihi1@.com")
+  validarEmail("johanmiihi1@.com")*/
 
+
+  /*21) Programa una función que dado un array numérico devuelve otro array con los números elevados al cuadrado, pe. mi_funcion([1, 4, 5]) devolverá [1, 16, 25].*/
+   const devuleAr =(arr=undefined)=>{
+    if(arr===undefined)console.warn("no ingresate un arreglo de numero ");
+
+    if( !(arr instanceof Array)) return console.error("el valor que ingresaste no es un areglo");
+
+    if(arr.lenght===0)return console.error("el areglo esta vacio");
+
+    for(let num of arr){
+      if(typeof arr!=="number")return console.warn(`el "${num}" ingresado no es un numero`);
+
+    }
+    const newArr = arr.map(el=>el*el);
+    return console.info(`el areglo original "${arr},\n arreglo elevado cuadrado"${newArr}"`)
+   }
+   devuleAr();
+   devuleAr();
+   devuleAr([1,4,8])
+
+  /*22) Programa una función que dado un array devuelva el número mas alto y el más bajo de dicho array, pe. miFuncion([1, 4, 5, 99, -60]) devolverá [99, -60].*/
+ /* 23) Programa una función que dado un array de números devuelva un objeto con 2 arreglos en el primero almacena los números pares y en el segundo los impares, pe. miFuncion([1,2,3,4,5,6,7,8,9,0]) devolverá {pares: [2,4,6,8,0], impares: [1,3,5,7,9]}.*/
