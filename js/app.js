@@ -247,7 +247,7 @@ textoCosonante("HOLA MUNDO")*/
     arrayObejto([1,2,3,4,5,6,7,8,9,0]);*/
 
 /*24) Programa una función que dado un arreglo de números devuelva un objeto con dos arreglos, el primero tendrá los numeros ordenados en forma ascendente y el segundo de forma descendiente, pe. miFuncion([7, 5,7,8,6]) devolverá { asc: [5,6,7,7,8], desc: [8,7,7,6,5] }.*/
- const acederDesender=(arr= undefined)=>{
+/* const acederDesender=(arr= undefined)=>{
    if (arr=== undefined)return console.warn("no ingresaste un arreglo de un numero");
 
       if (!(arr instanceof Array)) return console.error("el valor que ingresaste no es un arreglo");
@@ -259,13 +259,71 @@ textoCosonante("HOLA MUNDO")*/
       }
 
       return console.info({
-        Acedente:arr.sort()
+        arr,
+        Acedente:arr.map(el=>el).sort(),
+        desendente:arr.map(el=>el).sort().reverse()
+
       
       })
 
 
 
  }
- acederDesender([2,12,4])
-/*25) Programa una función que dado un arreglo de elementos, elimine los duplicados, pe. miFuncion(["x", 10, "x", 2, "10", 10, true, true]) devolverá ["x", 10, 2, "10", true].
+ acederDesender([7, 5,7,8,6]);*/
+
+/*25) Programa una función que dado un arreglo de elementos, elimine los duplicados, pe. miFuncion(["x", 10, "x", 2, "10", 10, true, true]) devolverá ["x", 10, 2, "10", true].*/
+ /* const eliminarDuplicado = (arr=undefined)=>{
+    if (arr=== undefined)return console.warn("no ingresaste un arreglo de un numero");
+
+    if (!(arr instanceof Array)) return console.error("el valor que ingresaste no es un arreglo");
+
+    if(arr.length === 0)return console.warn("el arreglo esta vacio");
+    
+    if(arr.length ===  1) return console.warn("el areglo debe de ser al menos 2 elemeto") ;*/
+        
+    /*return console.info({
+      original:arr,
+      sinDuplicar:arr.filter((value,index,self)=>self.indexOf(value)===index)
+
+    })*/
+   /* return console.info({
+      original:arr,
+      SinDuplicar:[...new Set(arr)]
+    })
+
+    }
+
+    eliminarDuplicado(["x", 10, "x", 2, "10", 10, true, true])*/
+
+
+
+
+  
 /*26) Programa una función que dado un arreglo de números obtenga el promedio, pe. promedio([9,8,7,6,5,4,3,2,1,0]) devolverá 4.5.*/
+
+const sumarPromedio=(arr= undefined)=>{
+  if (arr=== undefined)return console.warn("no ingresaste un arreglo de un numero");
+
+if (!(arr instanceof Array)) return console.error("el valor que ingresaste no es un arreglo");
+
+if(arr.length === 0)return console.warn("el arreglo esta vacio");
+
+for( num of arr){
+  if (typeof num!=="number")return console.error(`el valor "${num}" ingresado, No es un numero`);
+}
+
+let suma=0;
+for(let p of arr){
+ promedi=(suma+=p)
+}
+
+console.info({
+  nota:arr,
+  acomuladoNota:promedi,
+  promedio:promedi/arr.length
+
+})
+}
+
+
+sumarPromedio([9,8,7,6,5,4,3,2,1,0])
