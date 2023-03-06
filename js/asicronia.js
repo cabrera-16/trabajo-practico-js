@@ -25,3 +25,29 @@ let temporizador = setInterval(()=>{
 
 clearTimeout(temporizador);
 console.log("depues de clearinterval");
+
+
+/* Ante de explicar como funciona el modelo de javascrits es importante enteder algunos conceptos:
+Procesamiento  Single thrad y Multi therad.
+Opwraciones de  CPU Y operaciones I/O.
+Opreraciones Cocurruentes y Paralelas
+Operaciones Bloqueantes y no Bloqueantes.
+Operaciones Sincronas y Asinconas.*/
+
+/*Codigo sincrono Bloqueante*/
+console.log("codigo sincrono");
+console.log("inicio");
+function dos(){
+    console.log("DOS")
+}
+
+function uno(){
+    console.log("UNO");
+    dos();
+    console.log("tres");
+    
+}
+uno();
+console.log("FIN")
+
+/*codigo asicrono no bloquantes  */
