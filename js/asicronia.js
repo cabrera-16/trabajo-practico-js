@@ -34,9 +34,12 @@ Opreraciones Cocurruentes y Paralelas
 Operaciones Bloqueantes y no Bloqueantes.
 Operaciones Sincronas y Asinconas.*/
 
-/*Codigo sincrono Bloqueante*/
+/*Codigo sincrono Bloqueante
+//PRIMERO SE EJECUTA ESTA 2
+(()=>{
 console.log("codigo sincrono");
 console.log("inicio");
+
 function dos(){
     console.log("DOS")
 }
@@ -47,7 +50,61 @@ function uno(){
     console.log("tres");
     
 }
+// PRIMERO COMIENZA POR EL FINAL DE LA FUNCION 
 uno();
 console.log("FIN")
+});
+/*codigo asicrono no bloquantes  
+(()=>{
+    console.log("codigo asincrono");
+    console.log("inicio");
 
-/*codigo asicrono no bloquantes  */
+    function dos(){
+        setTimeout(function() {
+            console.log("DOS")
+        }, 1000);
+    }
+
+    function uno(){
+        setTimeout(function (){
+            console.log("uno")
+        },0);
+        dos();
+        console.log("tres");
+    }
+    uno();
+    
+    console.log("fin")
+}); */
+//callbacks
+function cuadradoCallback(value,callback){
+    setTimeout(()=>{
+    callback(value,value*1000);
+    },0| Math.random()*100);
+}
+    cuadradoCallback(0,(value,result)=>{
+   
+     console.log(`callback:${value},${result}`);
+
+        cuadradoCallback(1,(value,result)=>{
+   
+         console.log(`callback:${value},${result}`);
+})   
+         cuadradoCallback(2,(value,result)=>{
+  
+    console.log(`callback:${value},${result}`);
+    
+
+})
+            cuadradoCallback(3,(value,result)=>{
+    
+             console.log(`callback:${value},${result}`);
+})
+                cuadradoCallback(4,(value,result)=>{
+    
+    console.log(`callback:${value},${result}`);
+    
+
+})
+
+});
