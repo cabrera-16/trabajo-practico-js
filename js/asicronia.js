@@ -193,13 +193,13 @@ cuadradoPromise (0)
 
     });
 }// esto es una funcion asicrona try  es la parte + y catch - Await es la espera mediante proceso
-async function funcionAsicronaDeclarada(){
+/*async function funcionAsicronaDeclarada(){
     try {
         console.log("inicico Async Funcion");
         let obj = await cuadradoPromise(1);
         console.log(`Async functions:${obj.value},${obj.result}`);
         
-         obj = await cuadradoPromise('1');
+         obj = await cuadradoPromise(1);
         console.log(`Async functions:${obj.value},${obj.result}`);
 
          obj = await cuadradoPromise(2);
@@ -232,7 +232,7 @@ async function funcionAsicronaDeclarada(){
          obj = await cuadradoPromise(7);
         console.log(`Async functions:${obj.value},${obj.result}`);
 
-         obj = await cuadradoPromise("8");
+         obj = await cuadradoPromise(8);
         console.log(`Async functions:${obj.value},${obj.result}`);
 
          obj = await cuadradoPromise(9);
@@ -249,7 +249,29 @@ async function funcionAsicronaDeclarada(){
         
     }
 
+}
+funcioneAsicronaExpresada();*/
+//symbol simbolo unico cadena y numero
+//set valores unico de un array
 
- }
-funcionAsicronaDeclarada();
-funcioneAsicronaExpresada();
+//symbol 
+/*
+let simbolo = Symbol("id");
+let simbolo2 = Symbol("id");
+console.log(simbolo===simbolo2);
+let sim1 = Symbol(1);
+let sy2 = Symbol(1);
+console.log(sim1===sy2);
+
+// set 
+let set = new Set([1,2,3,4,5,6,true,true,false,{},{},"hola","Hola"]);
+console.log(set.size);
+console.log(set);
+console.log(set[5]);*/
+
+
+// json
+ 
+
+
+console.log(JSON);
