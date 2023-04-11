@@ -274,4 +274,7 @@ console.log(set[5]);*/
  
 
 
-console.log(JSON);
+//console.log(JSON);
+ const $text= document.getElementById("que-es");
+ let $text1=`este texto modificado por js `
+ $text.textContent = $text1
