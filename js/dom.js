@@ -31,10 +31,10 @@
  $figure.appendChild($figcaption);
  $cards.appendChild($figure);
 
-
+// segunda etiqueta
  $figure2.innerHTML=`
  <img src="https://placeimg.com/200/200/people" alt="people">
  <figcaption>people</figcaption>
  `;
 $figure2.classList.add("card");
-$cards.appendChild($figure2)
+$cards.appendChild($figure2);
