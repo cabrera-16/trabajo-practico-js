@@ -300,7 +300,7 @@ textoCosonante("HOLA MUNDO")*/
 
   
 /*26) Programa una función que dado un arreglo de números obtenga el promedio, pe. promedio([9,8,7,6,5,4,3,2,1,0]) devolverá 4.5.*/
-
+/*
 const sumarPromedio=(arr= undefined)=>{
   if (arr=== undefined)return console.warn("no ingresaste un arreglo de un numero");
 
@@ -327,3 +327,12 @@ console.info({
 
 
 sumarPromedio([9,8,7,6,5,4,3,2,1,0])
+*/
+let nombre =prompt("ingrese su nombre");
+let matricula =prompt("ingrese la matricula")
+let nota = prompt("ingrese la nota") 
+if (nota >=80 || nota <100 ){
+  document.write("Aprovaste la asignatura A")
+}else if(nota >=70 || nota<=60){
+  document.write("aprovaste con B")
+}
