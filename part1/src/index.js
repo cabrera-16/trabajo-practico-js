@@ -2,9 +2,10 @@ import ReacDOM from 'react-dom';
 import {useState} from 'react';
 
 
+
 const rootElement = document.getElementById('root');
 
-
+// compontes******
 /*const Couter = (props)=>{
   return <h1>{props.number}</h1>
 }*/
@@ -12,6 +13,13 @@ const rootElement = document.getElementById('root');
     return <h1>{number1}</h1>
   
 }
+function MyButton (){
+  return(
+    <button>MI BOTON</button>
+  )
+ }
+ 
+//
 const App1 =(props)=>{
  const [contadorValue,updateContador]= useState (5);
  /*const contador = useState (13);
@@ -21,7 +29,8 @@ const App1 =(props)=>{
  setInterval(() => {
   updateContador(contadorValue+1)
  }, 2000);*/
-  
+  // componetes *********
+
 const handleClick =()=>{
   updateContador(contadorValue+1)
 }
@@ -43,9 +52,15 @@ if (contadorValue <= 50){
 }else{
   cambio = "no se puede pasar de los 50"
 }
-   
+  const now = new Date();
+  const a = 10;
+  const b = 10;
   return (
   <div>
+    <p>hello world it is {now.toString()}</p>
+    <p>
+      {a} plus  {b} is {a+b}
+    </p>
     <  Couter1 number1={contadorValue}/>
     <h1>{cambio}</h1>
     <p>{mensaje}</p>
@@ -55,8 +70,16 @@ if (contadorValue <= 50){
       <button onClick={handleClickReset}>
         reset
       </button>
+      
+
+      <h1>HELLO WORD TO MY APP</h1>
+      <MyButton/>
+  
   </div>
-  )
+
+
+  
+  );
 }
 
 ReacDOM.render(<App1 />, rootElement);
