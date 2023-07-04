@@ -1,4 +1,4 @@
-import ReacDOM from 'react-dom';
+/*import ReacDOM from 'react-dom';
 import {useState} from 'react';
 
 
@@ -8,11 +8,11 @@ const rootElement = document.getElementById('root');
 /*const Couter = (props)=>{
   return <h1>{props.number}</h1>
 }*/
-  const Couter1 =({number1})=>{
-    return <h1>{number1}</h1>
+ /* const Couter1 =({number1})=>{
+ //   return <h1>{number1}</h1>
   
-}
-const App1 =(props)=>{
+}*/
+/*const App1 =(props)=>{
  const [contadorValue,updateContador]= useState (5);
  /*const contador = useState (13);
  const contadorValue = contador[0];
@@ -22,7 +22,7 @@ const App1 =(props)=>{
   updateContador(contadorValue+1)
  }, 2000);*/
   
-const handleClick =()=>{
+/*const handleClick =()=>{
   updateContador(contadorValue+1)
 }
 const handleClickReset =()=>{
@@ -37,7 +37,7 @@ if(isEven){
 }else{
   mensajePar ="impar"
 }*/
-let cambio=''
+/*let cambio=''
 if (contadorValue <= 50){
     
 }else{
@@ -59,4 +59,4 @@ if (contadorValue <= 50){
   )
 }
 
-ReacDOM.render(<App1 />, rootElement);
+ReacDOM.render(<App1 />, rootElement);*/
